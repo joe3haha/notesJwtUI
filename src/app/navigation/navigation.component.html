@@ -1,0 +1,42 @@
+<!-- Icon Bar (Sidebar - hidden on small screens) -->
+<nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
+
+  <a href="/dashboard" *ngIf="authenticated === false" class="w3-bar-item w3-button w3-padding-large w3-black">
+    <i class="fa fa-home w3-xxlarge"></i>
+    <p>ABOUT</p>
+  </a>
+  <a href="/home" *ngIf="authenticated"  class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-sticky-note w3-xxlarge"></i>
+    <p>NOTES</p>
+  </a>
+  <a href="https://www.linkedin.com/in/joe-ybarra-63370598" target="_blank" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-envelope w3-xxlarge"></i>
+    <p>CONTACT</p>
+  </a>
+  <a href="/login" *ngIf="authenticated === false" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-sign-in w3-xxlarge"></i>
+    <p>LOGIN</p>
+  </a>
+  <a href="" (click)="onLogout()" *ngIf="authenticated" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-sign-out w3-xxlarge"></i>
+    <p>LOGOUT</p>
+  </a>
+  <a href="/register" (click)="onLogout()" *ngIf="authenticated === false" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-laptop w3-xxlarge"></i>
+    <p>REGISTER</p>
+  </a>
+
+  
+</nav>
+
+<!-- Navbar on small screens (Hidden on medium and large screens) -->
+<div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
+  <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
+    <a href="/dashboard" *ngIf="authenticated === false"  class="w3-bar-item w3-button" style="width:25% !important">ABOUT</a>
+    <a href="/home" *ngIf="authenticated"  class="w3-bar-item w3-button" style="width:25% !important">NOTES</a>
+    <a href="https://www.linkedin.com/in/joe-ybarra-63370598" class="w3-bar-item w3-button" style="width:25% !important">CONTACT</a>
+    <a href="/login" *ngIf="authenticated === false"  class="w3-bar-item w3-button" style="width:25% !important">LOGIN</a>
+    <a href="" (click)="onLogout()" *ngIf="authenticated" class="w3-bar-item w3-button" style="width:25% !important">LOGOUT</a>
+    <a href="/register" *ngIf="authenticated === false"  class="w3-bar-item w3-button" style="width:25% !important">REGISTER</a>
+  </div>
+</div>

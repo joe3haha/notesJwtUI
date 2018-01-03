@@ -1,0 +1,13 @@
+<div *ngIf="!hidden">
+<h3 class="w3-margin w3-padding-24">Edit note <i class="fa fa-arrow-circle-left" (click)="goBack()"></i></h3>
+<form class="w3-margin" novalidate (ngSubmit)="onSubmit()" #f="ngForm">
+    <input class="w3-input w3-padding-16 w3-margin-top w3-margin-bottom"
+      [(ngModel)]="note.title"
+      name="title"
+      placeholder="Title">
+  <div>
+      <textarea ref-textarea [(ngModel)]="note.message" class="w3-input w3-padding-16 w3-margin-top w3-margin-bottom" name="message" placeholder="message" style="width:100%">{{note.message}}</textarea>
+  </div>
+  <button class="w3-button w3-light-grey w3-padding-large w3-margin-top" type="submit">Edit</button>
+</form>
+</div>

@@ -1,0 +1,15 @@
+  <!-- About Section -->
+  <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="about">
+    <h2 class="w3-text-light-grey">Notes - About this project</h2>
+    <hr style="width:200px" class="w3-opacity">
+    <p>This is the second iteration of my note taking app's front-end. I'm using angular 4.2 for this particular project. This front-end is associated with the following back-end: <a href="https://github.com/joe3haha/notesjwt" target="_blank">Spring boot back-end</a>. The purpose of this project was two fold; To build my portfolio of projects on github and to learn Angular.
+    </p>
+    <p>This project allows users to create and manipulate a list of notes. Users can create / edit / delete these notes through this UI. I used W3.CSS instead of creating my own custom CSS. It made sense to just utilize this pre-existing CSS so that I could focus on learning Angular. Here is a link to <a href="https://www.w3schools.com/w3css/" target="_blank">W3.CSS</a>. More specifically I utilized and edited one of the templates provided: <a href="https://www.w3schools.com/w3css/tryit.asp?filename=tryw3css_templates_dark_portfolio&stacked=h" target="_blank"> this one </a>. Shoutout to W3 for this! </p>
+    <p>This project uses JWT for authentication against the stateless backend server. Once you login a token will be stored in local storage and sent with any request made against the back-end. This is done via an interceptor (really cool in angular) that appends any request with the appropriate headers</p>
+    <p>I protected the routes using a service that checks the expiration time of the JWT and either redirects to the login page or allows a user to navigate to the appropriate page.</p>
+    <P>The navigation pane will show different icons to navigate to depending on the authenticated state of the user. I used observables and a service to keep track of authenticated state of a user.</P>
+    <p>Go ahead and create a new user if you like, or use the default accounts I created whenever the back-end is started. un: pojo - pw: test or un: wiggle - pw: test</p> 
+    <p>The pojo account will have a single note already generated. Feel free to contact me with any questions.</p>
+  <!-- End About Section -->
+  </div>
+  

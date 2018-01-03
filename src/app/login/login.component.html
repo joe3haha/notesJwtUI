@@ -1,0 +1,19 @@
+<div>
+<h3 class="w3-margin w3-padding-24">Login <i class="fa fa-arrow-circle-left" (click)="goBack()"></i></h3>
+<form class="w3-margin" novalidate (ngSubmit)="onSubmit()" #f="ngForm">
+    <input class="w3-input w3-padding-16 w3-margin-top w3-margin-bottom"
+      [(ngModel)]="user.username"
+      name="username"
+      placeholder="Username">
+  <div>
+      <input class="w3-input w3-padding-16 w3-margin-top w3-margin-bottom"
+      [(ngModel)]="user.password"
+      name="password"
+      placeholder="Password">
+  </div>
+  <div *ngIf="error" >
+    <span>There was an error logging you in. Please try again.</span>
+  </div>
+  <button class="w3-button w3-light-grey w3-padding-large w3-margin-top" type="submit">Login</button>
+</form>
+</div>
